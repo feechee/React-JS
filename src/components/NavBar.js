@@ -4,9 +4,9 @@ const NavBar = () =>{
     return (
     <nav className='navBar'>
     <ul className='listado'>
-      <li className='item'>Home</li>
-      <li className='item'>Productos</li>
-      <li className='item'>Contacto</li>
+    <a href="../index.html"><li className='item'>Home</li></a>
+    <a href="../index.html"><li className='item'>Productos</li></a>
+    <a href="../index.html"><li className='item'>Contacto</li></a>
     </ul>
   </nav>
     );
