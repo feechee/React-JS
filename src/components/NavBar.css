@@ -1,37 +1,7 @@
+.navBar{
+  background-color: rgb(202, 255, 58);
+}
+.marca{
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
 
-.App {
-    text-align: center;
-  }
-  
-  .navBar{
-    background-color: rgb(215, 250, 90);
-    width: 100vw;
-    height: 5vw;
-    display: flex;
-    align-items: center;
-  }
-  
-  .listado{
-  display: flex;
-  flex-direction: row;
-  -ms-flex-align: center;
-  justify-content: center;
-  width: 100vw;
-  }
-  
-  .item{
-    height: 2.5vw;
-    width: 20vw;
-    color: rgb(148, 148, 148);
-    font-size: medium;
-    list-style: none;
-    border-bottom: 5px solid rgb(141, 120, 255);
-    text-align:center;
-  }
-  
-  .item:hover{
-    background-color: rgb(234, 252, 170);
-  }
-  
-
-  
