@@ -4,6 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
+import ItemCounter from '../components/ItemCounter';
 
 export default function ItemListContainer() {
   return (
@@ -22,12 +23,16 @@ export default function ItemListContainer() {
           <Typography variant="body2" color="text.secondary">
             Arnes de escalada deportiva marca Edelrid
           </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Stock = 5
+          </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
         <Button size="small" color="primary">
           Comprar
         </Button>
+        <ItemCounter />
       </CardActions>
     </Card>
   );

@@ -1,0 +1,16 @@
+.counter{
+    display: flex;
+    flex-direction: row;
+    margin-left: 50px;
+}
+
+p{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.boton{
+    background-color: white;
+    border: none;
+}
