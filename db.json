@@ -1,0 +1,26 @@
+{
+  "productos": [
+    
+      {
+          "id":1,
+          "nombre":"Arnes",
+          "imgUrl":"https://www.blogdeaventura.com/wp-content/uploads/2021/04/ctascent_2.jpg",
+          "stock":5,
+          "precio":15000
+      },
+      {
+          "id":2,
+          "nombre":"Aseguradores",
+          "imgUrl":"https://www.nakaoutdoors.com.ar/img/articulos/petzl_grigri_10_imagen2.jpeg",
+          "stock":10,
+          "precio":20000
+      },
+      {
+          "id":3,
+          "nombre":"Pedulas",
+          "imgUrl":"https://www.nakaoutdoors.com.ar/img/articulos/la_sportiva_miura_imagen1.jpg",
+          "stock":15,
+          "precio":16000
+      }
+    ]
+}

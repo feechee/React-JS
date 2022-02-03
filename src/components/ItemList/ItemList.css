@@ -1,0 +1,9 @@
+.list__containerl{
+    display: flex;
+}
+
+.containerl{
+    margin-top: 80px;
+    margin-left: 80px;
+    width: 300px;
+}

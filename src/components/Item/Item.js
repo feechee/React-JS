@@ -4,27 +4,27 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
-import ItemCounter from '../components/ItemCounter';
+import ItemCounter from '../ItemCounter/ItemCounter';
 
-export default function ItemListContainer() {
+const  Item = ({data}) => {
   return (
     <Card sx={{ maxWidth: 300 }}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="300"
-          image={require('../img/arnesesPrinc.png')}
-          alt="arnes"
+          image={data.imgUrl}
+          alt={data.nombre}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Arnes
+            {data.nombre}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Arnes de escalada deportiva marca Edelrid
+            
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Stock = 5
+            {data.stock}
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -32,8 +32,10 @@ export default function ItemListContainer() {
         <Button size="small" color="primary">
           Comprar
         </Button>
-        <ItemCounter />
+        <ItemCounter cant = {data.stock} />
       </CardActions>
     </Card>
   );
 }
+
+export default Item;

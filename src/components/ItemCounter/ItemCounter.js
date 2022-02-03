@@ -1,13 +1,12 @@
 import React from "react";
-import "../components/ItemCounter.css"
+import "../ItemCounter/ItemCounter.css"
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 
-const ItemCounter = ()=>{
-    let stock = 5
+const ItemCounter = ({cant})=>{
     const [counter, setCounter] = React.useState(1);
     const handlerCounterUp = () => {
-        if (counter < stock) {
+        if (counter < cant) {
             setCounter(counter +1);
         }
     }

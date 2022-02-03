@@ -1,5 +1,5 @@
-import "./NavBar.css";
-import CartWidget from "./Cartwidget.js";
+import "../NavBar/NavBar.css";
+import CartWidget from "../Cartwidget/Cartwidget.js";
 import {Navbar, NavbarBrand, NavbarToggler, Nav, NavItem, Collapse, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem} from 'reactstrap'
 const NavBar = () =>{
     return(
@@ -37,7 +37,7 @@ const NavBar = () =>{
           >
             Productos
           </DropdownToggle>
-          <DropdownMenu right>
+          <DropdownMenu end>
             <DropdownItem>
               Cuerdas
             </DropdownItem>
