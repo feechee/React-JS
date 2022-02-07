@@ -4,23 +4,36 @@
       {
           "id":1,
           "nombre":"Arnes",
+          "marca:":"Edelrid",
           "imgUrl":"https://www.blogdeaventura.com/wp-content/uploads/2021/04/ctascent_2.jpg",
           "stock":5,
-          "precio":15000
+          "precio":15000,
+          "descripcion":"El arnés Jay III de Edelrid es el todoterreno perfecto para la escalada, el alpinismo y el uso en vías ferratas. Las perneras ajustables y un punto de amarre fácil de centrar permiten que el arnés se adapte rápida y convenientemente al tamaño.",
+          "info":"Certificación: CE 0123 país de origen: Vietnam Certificación: EN 12277 Typ C Peso: 368 g",
+          "talle":"Talla S. cintura: 63-83 cm / pernera: 45-55 cm. Talla M. cintura: 70-90 cm / pernera: 50-60 cm. Talla L. cintura: 78-98 cm / pernera: 55-65 cm."
       },
       {
           "id":2,
           "nombre":"Aseguradores",
+          "marca":"Petzl",
           "imgUrl":"https://www.nakaoutdoors.com.ar/img/articulos/petzl_grigri_10_imagen2.jpeg",
           "stock":10,
-          "precio":20000
+          "precio":20000,
+          "descripcion":"El GRIGRI + es un asegurador con frenado asistido destinado a todos los escaladores, en rocódromo y deportiva en pared. Se puede utilizar con todas las cuerdas simples (optimizado para las cuerdas de diámetro comprendido entre 8,9 y 10,5 mm) y es adecuado para las utilizaciones intensivas. La desmultiplicación de la empuñadura ofrece un control excepcional del descenso. Dos modos de utilización permiten escoger un modo de asegurar según las necesidades, escalada en polea o escalada de primero. El modo de asegurar en polea y la empuñadura antipánico ofrecen un aseguramiento más confortable y hacen que el GRIGRI + sea especialmente adecuado para el aprendizaje.",
+          "info":"Peso: 200 g Compatibilidad de la cuerda: cuerda simple de 8,5 a 11 mm de diámetro Materiales: placas laterales de aluminio, patín de frenado y placa de refuerzo de acero inoxidable, y empuñadura de nilón reforzado Certificaciones: CE EN 15151, UIAA",
+          "talle":"Unico"
       },
       {
           "id":3,
           "nombre":"Pedulas",
+          "marca":"La Sportiva",
           "imgUrl":"https://www.nakaoutdoors.com.ar/img/articulos/la_sportiva_miura_imagen1.jpg",
           "stock":15,
-          "precio":16000
+          "precio":16000,
+          "descripcion":"Pies de gato para escala deportiva, conocido modelo de la marca La Sportiva pero en su novedosa versión con velcro, una solución eficaz y rápida para competición o escaladores exigentes. Respetando aspectos del modelo con cordones y mejorando otros, como la tecnología y la facilidad para calzarlos. La tecnología P3 ayuda a mantener la forma del arco y la durabilidad de los materiales, aun con un uso continuado. Se ha eliminado, en su parte superior, forro para así aportar mayor agarre y tracción en cada uno de nuestros movimientos.",
+          "info":"Tecnología P3. Construcción tubular en ante. Construcción superior de piel de Gamuza. Sistema de ajuste, Horma PD 75. Forro Dentex. Suela Vibram® XS Edge 4 mm. Peso aproximado de 470 g (el par).",
+          "talle":"39 40 41 42 43 44 45"
+        
       }
     ]
 }

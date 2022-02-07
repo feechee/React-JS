@@ -3,8 +3,9 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions } from '@mui/material';
+import {CardActionArea, CardActions } from '@mui/material';
 import ItemCounter from '../ItemCounter/ItemCounter';
+import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
 
 const  Item = ({data}) => {
   return (
@@ -24,14 +25,13 @@ const  Item = ({data}) => {
             
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {data.stock}
+            Stock:{data.stock}
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
-          Comprar
-        </Button>
+        <ItemDetailContainer data={data} />
+        
         <ItemCounter cant = {data.stock} />
       </CardActions>
     </Card>
