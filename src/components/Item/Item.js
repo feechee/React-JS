@@ -4,8 +4,9 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import {CardActionArea, CardActions } from '@mui/material';
-import ItemCounter from '../ItemCounter/ItemCounter';
-import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
+
+
+
 
 const  Item = ({data}) => {
   return (
@@ -18,21 +19,13 @@ const  Item = ({data}) => {
           alt={data.nombre}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography gutterBottom variant="h5" align='center'>
             {data.nombre}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Stock:{data.stock}
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <ItemDetailContainer data={data} />
         
-        <ItemCounter cant = {data.stock} />
       </CardActions>
     </Card>
   );

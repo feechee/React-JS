@@ -1,7 +1,28 @@
 .navBar{
   background-color: rgb(202, 255, 58);
+  height: 80px;
+  display: flex;
+  align-items: center;
 }
 .marca{
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-decoration: none;
+  color: grey;
+  font-size: 50px;
+}
+
+.link{
+  text-decoration: none;
+  margin: 30px;
+  color: rgb(164, 173, 182);
+  font-size: x-large;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+  
+
+}
+
+.nav{
+  margin-left: 340px;
+
 }
 

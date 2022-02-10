@@ -1,6 +1,7 @@
 import "../NavBar/NavBar.css";
 import CartWidget from "../Cartwidget/Cartwidget.js";
-import {Navbar, NavbarBrand, NavbarToggler, Nav, NavItem, Collapse, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem} from 'reactstrap'
+import {Navbar, NavbarToggler, Nav, Collapse, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem} from 'reactstrap'
+import { Link } from "react-router-dom"
 const NavBar = () =>{
     return(
       <div>
@@ -9,51 +10,26 @@ const NavBar = () =>{
     expand="md"
     light
   >
-    <NavbarBrand className="marca" href="../index.html">
-      TREP.ar
-    </NavbarBrand>
+      <Link to="/" className="marca">
+        TREP.ar
+      </Link> 
     <NavbarToggler onClick={function noRefCheck(){}} />
-    <Collapse navbar>
+    <Collapse navbar className="nav" >
       <Nav
-        className="mx-auto navBar"
       >
-        <NavItem>
-          <NavLink className="text" href="../index.html">
-            Contacto
-          </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink href="../index.html">
+          <Link to ="/" className="link">
+            Home
+          </Link>
+          <Link to= "/envios" className="link">
             Envios
-          </NavLink>
-        </NavItem>
-        <UncontrolledDropdown
-          inNavbar
-          nav
-        >
-          <DropdownToggle
-            caret
-            nav
-          >
-            Productos
-          </DropdownToggle>
-          <DropdownMenu end>
-            <DropdownItem>
-              Cuerdas
-            </DropdownItem>
-            <DropdownItem>
-              Pedulas
-            </DropdownItem>
-            <DropdownItem>
-              Mosquetones
-            </DropdownItem>
-          </DropdownMenu>
-        </UncontrolledDropdown>       
+          </Link>
+          <Link to= "/contacto" className="link">
+            Contacto
+          </Link>       
       </Nav>
     </Collapse>
-      <a href="./index.html">
       <CartWidget />
-      </a>
+      
         
 
   </Navbar>

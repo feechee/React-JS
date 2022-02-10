@@ -1,110 +1,31 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import Button from '@mui/material/Button';
-import { styled } from '@mui/material/styles';
-import Dialog from '@mui/material/Dialog';
-import DialogTitle from '@mui/material/DialogTitle';
-import DialogContent from '@mui/material/DialogContent';
-import DialogActions from '@mui/material/DialogActions';
-import IconButton from '@mui/material/IconButton';
-import CloseIcon from '@mui/icons-material/Close';
-import Typography from '@mui/material/Typography';
-import CardMedia from '@mui/material/CardMedia';
+import React, { useState, useEffect} from "react";
+import ItemDetail from "../ItemDetail/ItemDetail";
+import axios from "axios";
+import { useParams } from "react-router-dom";
+import Spinner from "../Spinner/Spinner";
 
-const BootstrapDialog = styled(Dialog)(({ theme }) => ({
-  '& .MuiDialogContent-root': {
-    padding: theme.spacing(2),
-  },
-  '& .MuiDialogActions-root': {
-    padding: theme.spacing(1),
-  },
-}));
+const ItemDetailContainer = () => {
+  const [dato, setDatos] = useState([]);
+  const [isLoading, setIsloading] =useState(true);
+  let id = useParams().id;
+  console.log(id);
+  useEffect(()=>{
+    axios(`http://localhost:3000/productos/${id}`).then((res)=> setDatos(res.data))
+    setTimeout(()=>{
+      setIsloading(false)
+    },2000)
+  },[])
 
-const BootstrapDialogTitle = (props) => {
-  const { children, onClose, ...other } = props;
 
-  return (
-    <DialogTitle sx={{ m: 0, p: 2 }} {...other}>
-      {children}
-      {onClose ? (
-        <IconButton
-          aria-label="close"
-          onClick={onClose}
-          sx={{
-            position: 'absolute',
-            right: 8,
-            top: 8,
-            color: (theme) => theme.palette.grey[500],
-            
-          }}
-        >
-          <CloseIcon />
-        </IconButton>
-      ) : null}
-    </DialogTitle>
-  );
-};
 
-BootstrapDialogTitle.propTypes = {
-  children: PropTypes.node,
-  onClose: PropTypes.func.isRequired,
-};
-
-function ItemDetailContainer ({data}) {
-  const [open, setOpen] = React.useState(false);
-
-  const handleClickOpen = () => {
-        setOpen(true)
-  };
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  return (
-    <div>
-      <Button variant="outlined" onClick={handleClickOpen}>
-        Comprar
-      </Button>
-      <BootstrapDialog
-        onClose={handleClose}
-        aria-labelledby="customized-dialog-title"
-        open={open}>
-        <BootstrapDialogTitle id="customized-dialog-title" onClose={handleClose}>
-          {data.nombre}
-        </BootstrapDialogTitle>
-        <DialogContent dividers>
-        <CardMedia         
-          component="img"
-          height="300"
-          image={data.imgUrl}
-          alt={data.nombre}>
-
-        </CardMedia>
-          <Typography gutterBottom>
-            Descripción: {data.descripcion}
-          </Typography>
-          </DialogContent>
-          <DialogContent dividers>
-          <Typography gutterBottom>
-           Información Técnica: {data.info}
-          </Typography>
-          </DialogContent>
-          <DialogContent dividers>
-          <Typography gutterBottom>
-            Talle: {data.talle}
-          </Typography>
-          </DialogContent>
-          <Typography variant="h5" align="center">
-              Precio: ${data.precio}
-          </Typography>
-        <DialogActions>
-          <Button autoFocus onClick={handleClose}>
-            Comprar
-          </Button>
-        </DialogActions>
-      </BootstrapDialog>
+  return(
+    <div key = {dato.id}>
+      {isLoading ? <Spinner /> : <ItemDetail data ={dato} />}         
     </div>
-  );
+  )
+
+
 }
 
 export default ItemDetailContainer;
+
