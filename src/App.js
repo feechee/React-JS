@@ -6,6 +6,7 @@ import CardDetail from "../src/views/CardDetail/CardDetail";
 import Contacto from "../src/views/Contacto/Contacto";
 import Home from "../src/views/Home/Home";
 import Envios from "../src/views/Envios/Envios";
+import Cart from "../src/views/Cart/Cart";
 const App = () => {
   return (
     <Router>
@@ -16,6 +17,7 @@ const App = () => {
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/envios" element={<Envios />} />
           <Route path="/detail/:id" element={<CardDetail />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </div>
     </Router>

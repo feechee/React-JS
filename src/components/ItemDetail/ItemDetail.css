@@ -23,3 +23,24 @@ img{
     
 }
 
+.containerDesc__item-cart{
+    height: 70px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+    
+}
+
+.compra{
+    border: 2px solid rgb(80, 204, 80);
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color:rgb(80, 204, 80);
+    
+
+    
+}
+
+
