@@ -19,7 +19,7 @@ const CartObject = ({ prod, deleteProduct }) => {
         </ListItemAvatar>
         <ListItemText primary={prod.nombre} />
         <ListItemText secondary={`cantidad: ${prod.cantidad}`} />
-        <ListItemText secondary={`precio: ${prod.precio}`} />
+        <ListItemText secondary={`precio: ${prod.precio*prod.cantidad}`} />
         <IconButton
               aria-label="close"
               color="inherit"

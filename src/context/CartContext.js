@@ -1,3 +1,4 @@
+import { VolumeMuteSharp } from "@mui/icons-material";
 import React, { createContext, useState } from "react";
 
 export const CartContext = createContext();
@@ -26,9 +27,14 @@ export const CartProvider = ({ children }) => {
 
   const deleteAll = ()=> setProduct([]);
 
+  const contadorCart = ()=>{
+      return product.reduce((acc) => acc + 1, 0);
+      
+  };
+
 
   return (
-    <CartContext.Provider value={{ product, addProduct, deleteProduct, deleteAll }}>
+    <CartContext.Provider value={{ product, addProduct, deleteProduct, deleteAll, contadorCart }}>
       {children}
     </CartContext.Provider>
   );

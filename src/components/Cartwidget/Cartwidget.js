@@ -19,12 +19,11 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 const CartWidget = () => {
   /* const [cart, setCart] = React.useState("") */
-  const {product}  = useContext(CartContext);
-  
+  const {contadorCart}  = useContext(CartContext);
   
   return (
     <Link to="/cart" className="cart">
-      {product.length !==0 ? <StyledBadge badgeContent={`${product.length}`} color="secondary">
+      {contadorCart() !==0 ? <StyledBadge badgeContent={`${contadorCart()}`} color="secondary">
         <ShoppingCartIcon />
       </StyledBadge> : <ShoppingCartIcon /> }
     </Link>

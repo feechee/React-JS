@@ -2,3 +2,9 @@
     display: flex;
     flex-direction: column;
 }
+
+.total{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
