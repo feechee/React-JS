@@ -1,9 +1,13 @@
-import * as React from "react";
+import React, { useContext, useState } from "react";
 import Badge from "@mui/material/Badge";
 import { styled } from "@mui/material/styles";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Link } from "react-router-dom";
 import "../Cartwidget/Cartwidget.css"
+import { CartContext } from "../../context/CartContext";
+
+
+
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
     right: -3,
@@ -12,12 +16,17 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
     padding: "0 4px",
   },
 }));
+
 const CartWidget = () => {
+  /* const [cart, setCart] = React.useState("") */
+  const {product}  = useContext(CartContext);
+  
+  
   return (
     <Link to="/cart" className="cart">
-      <StyledBadge badgeContent={3} color="secondary">
+      {product.length !==0 ? <StyledBadge badgeContent={`${product.length}`} color="secondary">
         <ShoppingCartIcon />
-      </StyledBadge>
+      </StyledBadge> : <ShoppingCartIcon /> }
     </Link>
   );
 };

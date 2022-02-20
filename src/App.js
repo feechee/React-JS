@@ -7,20 +7,26 @@ import Contacto from "../src/views/Contacto/Contacto";
 import Home from "../src/views/Home/Home";
 import Envios from "../src/views/Envios/Envios";
 import Cart from "../src/views/Cart/Cart";
+import {CartProvider} from "./context/CartContext"
+import {db} from "../src/FireBase/FireBase"
+
+
 const App = () => {
   return (
+    <CartProvider>
     <Router>
-      <div className="app">
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/contacto" element={<Contacto />} />
-          <Route path="/envios" element={<Envios />} />
-          <Route path="/detail/:id" element={<CardDetail />} />
-          <Route path="/cart" element={<Cart />} />
-        </Routes>
-      </div>
+        <div className="app">
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/contacto" element={<Contacto />} />
+            <Route path="/envios" element={<Envios />} />
+            <Route path="/detail/:id" element={<CardDetail />} />
+            <Route path="/cart" element={<Cart />} />
+          </Routes>
+        </div> 
     </Router>
+    </CartProvider>
   );
 };
 

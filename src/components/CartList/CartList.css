@@ -1,0 +1,4 @@
+.vaciarButton{
+    display: flex;
+    flex-direction: column;
+}

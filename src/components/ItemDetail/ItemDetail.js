@@ -1,13 +1,16 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
 import ItemCounter from "../ItemCounter/ItemCounter";
 import "../ItemDetail/ItemDetail.css";
 import { Link } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
+
 
 const ItemDetail = ({ data }) => {
   const [quantity, setQuantity] = useState([])
   const onChangeValue = (e)=>{
     setQuantity(e.target.value)
   }
+  const {product, addProduct}  = useContext(CartContext);
   return (
     <div className="containerDesc">
       <div className="containerDesc__item">
@@ -40,9 +43,9 @@ const ItemDetail = ({ data }) => {
          />}
       </div>
       <div className="containerDesc__item-cart">
-      <Link className="compra" to="/cart">
+      {quantity.length ? <Link onClick={()=>addProduct(data, parseInt(quantity))}  className="compra" to="/cart">
         FINALIZAR COMPRA
-        </Link>
+        </Link> : "" }
       </div>
     </div>
   );
