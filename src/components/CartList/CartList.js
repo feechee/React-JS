@@ -12,18 +12,19 @@ const CartList = () => {
     console.log(product.length);
   let subtotal = 0;
   let total = 0;
+  console.log(product);
   return (
     <>
       <List
         sx={{
-          width: "100%",
-          bgcolor: "background.paper",
+          width: "70%",
         }}
         className="cards"
       >
         {product.map((prod) => {
-          subtotal = prod.precio * prod.cantidad;
+          subtotal = prod.Precio * prod.cantidad;
           total = total + subtotal;
+          
           return (
               <div key={prod.id}>
                   {product.length == 0 ? <p> No hay agregado ningun producto. Ingrese a la seccion <Link to="/">Productos</Link> para realizar su compra.</p> : <CartObject  prod={prod} deleteProduct={deleteProduct}/>} 

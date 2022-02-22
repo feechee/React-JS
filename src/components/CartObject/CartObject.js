@@ -4,22 +4,36 @@ import ListItemText from "@mui/material/ListItemText";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
 import ImageIcon from "@mui/icons-material/Image";
-import Divider from "@mui/material/Divider";
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
+import { flexbox, height } from "@mui/system";
+import { ForkLeft } from "@mui/icons-material";
 
 const CartObject = ({ prod, deleteProduct }) => {
   return (
     <div>
-      <ListItem>
+      <ListItem
+        sx={{
+          height: 100,
+          backgroundColor:"#0000002a",
+          margin:0.5,
+          borderRadius:25,
+        }}>
         <ListItemAvatar>
-          <Avatar>
-            <ImageIcon />
+          <Avatar
+          sx={{
+              width:80,
+              height:80,
+              marginRight:5,
+          }}
+           alt={prod.Nombre} src={prod.Img}>
+            <ImageIcon
+            />
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary={prod.nombre} />
-        <ListItemText secondary={`cantidad: ${prod.cantidad}`} />
-        <ListItemText secondary={`precio: ${prod.precio*prod.cantidad}`} />
+        <ListItemText primary={prod.Nombre} />
+        <ListItemText primary={`cantidad: ${prod.cantidad}`} />
+        <ListItemText primary={`precio: ${prod.Precio*prod.cantidad}`} />
         <IconButton
               aria-label="close"
               color="inherit"
@@ -29,7 +43,6 @@ const CartObject = ({ prod, deleteProduct }) => {
               <CloseIcon fontSize="inherit" />
             </IconButton>
       </ListItem>
-      <Divider variant="inset" component="li" />
     </div>
   );
 };

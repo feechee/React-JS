@@ -1,4 +1,8 @@
-
+.cartContainer{
+    height: 976px;
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/trep-ar.appspot.com/o/Imagenes%2Fwallpapertip_rock-climbing-wallpaper_426866.jpg?alt=media&token=caf7aef0-23d1-4404-976f-bcee8816aaa9");
+    background-blend-mode: hard-light;
+}
 
 h2{
     padding: 50px;

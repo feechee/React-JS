@@ -3,7 +3,7 @@ import ItemListContainer from "../../components/ItemListContainer/ItemListContai
 
 const Home = () => {
   return (
-    <div className="container">
+    <div>
       <ItemListContainer />
     </div>
   );

@@ -14,41 +14,34 @@ const ItemDetail = ({ data }) => {
   return (
     <div className="containerDesc">
       <div className="containerDesc__item">
-        <h1>{data.nombre}</h1>
+        <h1>{data[0].Nombre}</h1>
       </div>
       <div className="containerDesc__item">
-        <img src={data.imgUrl} alt="#"></img>
+        <img src={data[0].Img} alt="#"></img>
       </div>
       <div className="containerDesc__item">
         <h3>Descripción:</h3>
-        <p>{data.descripcion}</p>
-      </div>
-      <div className="containerDesc__item">
-        <h3>Información técnica:</h3>
-        <p>{data.info}</p>
-      </div>
-      <div className="containerDesc__item">
-        <h3>Talle:</h3>
-        <p>{data.talle}</p>
+        <p>{data[0].Descripción}</p>
       </div>
       <div className="containerDesc__item">
         <h3>Stock:</h3>
-        <p>{data.stock}</p>
+        <p>{data[0].Stock}</p>
       </div>
       <div className="containerDesc__item">
         <h3>Cantidad:</h3>
         {quantity.length ? <p>{quantity}</p> : <ItemCounter  
-        cant={data.stock}
+        cant={data[0].Stock}
         change={onChangeValue}
          />}
       </div>
       <div className="containerDesc__item-cart">
-      {quantity.length ? <Link onClick={()=>addProduct(data, parseInt(quantity))}  className="compra" to="/cart">
+      {quantity.length ? <Link onClick={()=>addProduct(data[0], quantity)}  className="compra" to="/cart">
         FINALIZAR COMPRA
         </Link> : "" }
       </div>
     </div>
   );
 };
+
 
 export default ItemDetail;

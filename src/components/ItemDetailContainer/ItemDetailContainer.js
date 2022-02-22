@@ -1,20 +1,27 @@
 import React, { useState, useEffect } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
-import axios from "axios";
 import { useParams } from "react-router-dom";
 import Spinner from "../Spinner/Spinner";
+import {db} from "../../FireBase/FireBase"
+import { collection, query, where, getDocs, documentId } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
-  const [dato, setDatos] = useState([]);
+  const [dato, setDato] = useState([]);
   const [isLoading, setIsloading] = useState(true);
   let id = useParams().id;
   useEffect(() => {
-    axios(`http://localhost:3000/productos/${id}`).then((res) =>
-      setDatos(res.data)
-    );
-    setTimeout(() => {
-      setIsloading(false);
-    }, 2000);
+    const getProduct = async ()=>{
+      const q = query(collection(db, "Productos"), where(documentId(), "==", id));
+      const docs =[]
+      const querySnapshot = await getDocs(q)
+      querySnapshot.forEach((doc)=>{
+        docs.push({...doc.data(), id: doc.id})
+        
+      })
+      setDato(docs);
+      setIsloading(false)
+    }
+    getProduct()
   }, []);
 
   return (

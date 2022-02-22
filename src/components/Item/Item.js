@@ -12,12 +12,12 @@ const Item = ({ data }) => {
         <CardMedia
           component="img"
           height="300"
-          image={data.imgUrl}
-          alt={data.nombre}
+          image={data.Img}
+          alt={data.Nombre}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" align="center">
-            {data.nombre}
+            {data.Nombre}
           </Typography>
         </CardContent>
       </CardActionArea>

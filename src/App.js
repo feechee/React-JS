@@ -8,7 +8,7 @@ import Home from "../src/views/Home/Home";
 import Envios from "../src/views/Envios/Envios";
 import Cart from "../src/views/Cart/Cart";
 import {CartProvider} from "./context/CartContext"
-import {db} from "../src/FireBase/FireBase"
+
 
 
 const App = () => {
