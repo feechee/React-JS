@@ -4,7 +4,6 @@ import React, { createContext, useState } from "react";
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-    
   const [product, setProduct] = useState([]);
   
   const addProduct = (data, quantity) => {
@@ -14,8 +13,9 @@ export const CartProvider = ({ children }) => {
     if (findProduct) {
       findProduct.cantidad += cant;
     } else {
-        product.push(data); 
+        product.push(data)
     }
+    setProduct([...product])
   };
 
   const deleteProduct = (productId) => {
@@ -29,7 +29,7 @@ export const CartProvider = ({ children }) => {
   const deleteAll = ()=> setProduct([]);
 
   const contadorCart = ()=>{
-      return product.reduce((acc) => acc +1, 0);
+      return product.reduce((acc, value) => acc+ value.cantidad, 0);
       
   };
 

@@ -3,10 +3,10 @@ import { collection, query, where, getDocs } from "firebase/firestore";
 import { useParams } from "react-router-dom";
 import {db} from "../../FireBase/FireBase"
 import ItemList from "../../components/ItemList/ItemList"
-
+import Spinner from "../../components/Spinner/Spinner"
 const Categorias = () => {
     const [categoriasData, setCategoriasData] = useState([])
-
+    const [isLoading, setIsloading] = useState(true);
     let categoria = useParams().categoria;
     
     useEffect(()=>{
@@ -20,6 +20,7 @@ const Categorias = () => {
         
       })
       setCategoriasData(docs);
+      setIsloading(false)
             
         }
         getCategoriasData()
@@ -29,7 +30,8 @@ const Categorias = () => {
   return (
     <div>
       <h2>Categorias</h2>
-      <ItemList productos={categoriasData} />
+      {isLoading ? <Spinner /> : <ItemList productos={categoriasData} />}
+      
     </div>
   );
 };
