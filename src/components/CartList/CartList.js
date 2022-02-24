@@ -27,12 +27,13 @@ const CartList = () => {
           
           return (
               <div key={prod.id}>
-                  {product.length === 0 ? <p> No hay agregado ningun producto. Ingrese a la seccion <Link to="/">Productos</Link> para realizar su compra.</p> : <CartObject  prod={prod} deleteProduct={deleteProduct}/>} 
+                  <CartObject  prod={prod} deleteProduct={deleteProduct}/> 
               </div>
               
           );
         })}
       </List>
+      {product.length == 0 ? <p> No ha agregado ningun producto. Ingrese a la sección <Link to="/">Productos</Link> para realizar su compra.</p> : "" }
       <div className="total">
         <p>Total: ${total}</p>
       </div>
