@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import Badge from "@mui/material/Badge";
 import { styled } from "@mui/material/styles";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
@@ -18,12 +18,11 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 const CartWidget = () => {
-  /* const [cart, setCart] = React.useState("") */
   const {contadorCart}  = useContext(CartContext);
   
   return (
     <Link to="/cart" className="cart">
-      {contadorCart() !==0 ? <StyledBadge badgeContent={`${contadorCart()}`} color="secondary">
+      {contadorCart() !== 0 ? <StyledBadge badgeContent={`${contadorCart()}`} color="secondary">
         <ShoppingCartIcon />
       </StyledBadge> : <ShoppingCartIcon /> }
     </Link>

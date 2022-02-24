@@ -6,8 +6,7 @@ import Avatar from "@mui/material/Avatar";
 import ImageIcon from "@mui/icons-material/Image";
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
-import { flexbox, height } from "@mui/system";
-import { ForkLeft } from "@mui/icons-material";
+
 
 const CartObject = ({ prod, deleteProduct }) => {
   return (

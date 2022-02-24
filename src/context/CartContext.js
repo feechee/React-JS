@@ -1,4 +1,4 @@
-import { VolumeMuteSharp } from "@mui/icons-material";
+
 import React, { createContext, useState } from "react";
 
 export const CartContext = createContext();
@@ -6,6 +6,7 @@ export const CartContext = createContext();
 export const CartProvider = ({ children }) => {
     
   const [product, setProduct] = useState([]);
+  
   const addProduct = (data, quantity) => {
     let cant = parseInt(quantity)
     data["cantidad"] = cant;
@@ -19,7 +20,7 @@ export const CartProvider = ({ children }) => {
 
   const deleteProduct = (productId) => {
     const updateProduct = product.filter((prod) => {
-      return prod.id !== productId;
+      return prod.id !== productId; 
     });
 
     setProduct(updateProduct);
@@ -28,7 +29,7 @@ export const CartProvider = ({ children }) => {
   const deleteAll = ()=> setProduct([]);
 
   const contadorCart = ()=>{
-      return product.reduce((acc) => acc + 1, 0);
+      return product.reduce((acc) => acc +1, 0);
       
   };
 

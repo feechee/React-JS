@@ -10,7 +10,7 @@ const ItemDetail = ({ data }) => {
   const onChangeValue = (e)=>{
     setQuantity(e.target.value)
   }
-  const {product, addProduct}  = useContext(CartContext);
+  const {addProduct}  = useContext(CartContext);
   return (
     <div className="containerDesc">
       <div className="containerDesc__item">

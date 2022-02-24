@@ -22,7 +22,7 @@ const ItemDetailContainer = () => {
       setIsloading(false)
     }
     getProduct()
-  }, []);
+  }, [id]);
 
   return (
     <div key={dato.id}>

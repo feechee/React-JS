@@ -1,12 +1,8 @@
 import "../NavBar/NavBar.css";
 import CartWidget from "../Cartwidget/Cartwidget.js";
-import {
-  Navbar,
-  NavbarToggler,
-  Nav,
-  Collapse,
-} from "reactstrap";
+import { Navbar, NavbarToggler, Nav, Collapse } from "reactstrap";
 import { Link } from "react-router-dom";
+import CategoryButton from "../CategoryButtons/CategoryButton";
 const NavBar = () => {
   return (
     <div>
@@ -27,6 +23,7 @@ const NavBar = () => {
               Contacto
             </Link>
           </Nav>
+          <CategoryButton className="link" />
         </Collapse>
         <CartWidget />
       </Navbar>
