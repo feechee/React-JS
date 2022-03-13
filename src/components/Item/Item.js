@@ -19,6 +19,9 @@ const Item = ({ data }) => {
           <Typography gutterBottom variant="h5" align="center">
             {data.Nombre}
           </Typography>
+          <Typography gutterBottom variant="h6" align="center">
+            {data.Marca}
+          </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions></CardActions>

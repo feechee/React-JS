@@ -1,0 +1,6 @@
+.checkObject{
+    margin: 5px;
+    border: 1px solid grey;
+    display:inline-flex;
+    border-radius: 25px;
+}

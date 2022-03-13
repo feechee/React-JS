@@ -1,0 +1,33 @@
+
+.checkH2{
+    margin: 20px;
+    border: 2px grey solid;
+    border-radius: 25px;
+}
+
+.checkH3{
+    
+    text-align: center;
+    margin: 10px;
+    ;
+}
+
+.checkOutContainer{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-evenly;
+    margin: 20px;
+    border: 2px grey solid;
+    border-radius: 25px;
+    
+}
+
+.total{
+    border-top: 2px grey solid;
+    border-bottom: 2px grey solid;
+}
+
+
+
+
+

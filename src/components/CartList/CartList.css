@@ -1,11 +1,21 @@
 
 .vaciarButton{
-    display: flex;
-    flex-direction: column;
+    margin: 10px;
+}
+
+.comprarButton{
+    margin: 10px;
 }
 
 .total{
     display: flex;
     justify-content: center;
     width: 100%;
+    
+}
+
+
+.buttonContainer{
+    display: flex;
+    
 }

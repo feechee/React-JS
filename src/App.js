@@ -9,6 +9,7 @@ import Envios from "../src/views/Envios/Envios";
 import Cart from "../src/views/Cart/Cart";
 import {CartProvider} from "./context/CartContext"
 import Categorias from "../src/views/Categorias/Categorias";
+import CheckOut from "../src/views/CheckOut/CheckOut";
 
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
             <Route path="/detail/:id" element={<CardDetail />} />
             <Route path="/categorias/:categoria" element={<Categorias />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/checkOut" element={<CheckOut />} />
           </Routes>
         </div> 
     </Router>

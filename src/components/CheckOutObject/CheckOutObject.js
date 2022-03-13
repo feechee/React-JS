@@ -5,25 +5,24 @@ import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
 import ImageIcon from "@mui/icons-material/Image";
 import IconButton from '@mui/material/IconButton';
-import CloseIcon from '@mui/icons-material/Close';
+import "../CheckOutObject/CheckOutObject.css"
 
 
-const CartObject = ({ prod, deleteProduct }) => {
+
+const CheckOutObject = ({ prod }) => {
   return (
-    <div>
-      <ListItem
-        sx={{
-          height: 100,
-          backgroundColor:"#0000002a",
-          margin:0.5,
-          borderRadius:25,
-        }}>
+    <div className="checkObject">
+      <ListItem sx={
+        {
+          flexDirection:"column",
+
+        }
+      }>
         <ListItemAvatar>
           <Avatar
           sx={{
               width:80,
               height:80,
-              marginRight:5,
           }}
            alt={prod.Nombre} src={prod.Img}>
             <ImageIcon
@@ -31,19 +30,17 @@ const CartObject = ({ prod, deleteProduct }) => {
           </Avatar>
         </ListItemAvatar>
         <ListItemText primary={prod.Nombre} />
-        <ListItemText primary={`Cantidad: ${prod.cantidad}`} />
-        <ListItemText primary={`Precio: $${prod.Precio*prod.cantidad}`} />
+        <ListItemText primary={`X ${prod.cantidad}`} />
+        <ListItemText primary={` $${prod.Precio*prod.cantidad}`} />
         <IconButton
               aria-label="close"
               color="inherit"
               size="small"
-              onClick={()=>deleteProduct(prod.id)}
             >
-              <CloseIcon fontSize="inherit" />
             </IconButton>
       </ListItem>
     </div>
   );
 };
 
-export default CartObject;
+export default CheckOutObject;

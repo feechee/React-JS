@@ -28,6 +28,10 @@ const ItemDetail = ({ data }) => {
         <p>{data[0].Stock}</p>
       </div>
       <div className="containerDesc__item">
+        <h3>Precio:</h3>
+        <p>$ {data[0].Precio}</p>
+      </div>
+      <div className="containerDesc__item">
         <h3>Cantidad:</h3>
         {quantity.length ? <p>{quantity}</p> : <ItemCounter  
         cant={data[0].Stock}
@@ -36,7 +40,7 @@ const ItemDetail = ({ data }) => {
       </div>
       <div className="containerDesc__item-cart">
       {quantity.length ? <Link onClick={()=>addProduct(data[0], quantity)}  className="compra" to="/cart">
-        FINALIZAR COMPRA
+        Agregar Al Carrito
         </Link> : "" }
       </div>
     </div>

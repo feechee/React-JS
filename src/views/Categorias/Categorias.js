@@ -29,7 +29,7 @@ const Categorias = () => {
 
   return (
     <div>
-      <h2>Categorias</h2>
+      <h2>{categoria}</h2>
       {isLoading ? <Spinner /> : <ItemList productos={categoriasData} />}
       
     </div>

@@ -1,10 +1,11 @@
 import React from "react";
-import ItemListContainer from "../../components/ItemListContainer/ItemListContainer";
+import Carrousel from "../../components/Carrousel/Carrousel";
 
 const Home = () => {
   return (
+    
     <div>
-      <ItemListContainer />
+      <Carrousel />
     </div>
   );
 };
