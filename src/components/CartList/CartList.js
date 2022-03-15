@@ -47,7 +47,7 @@ const CartList = () => {
           {product.length === 0 ? (
             ""
           ) : (
-            <Button onClick={deleteAll} variant="contained">
+            <Button onClick={deleteAll} variant="contained" color="secondary">
               Vaciar
             </Button>
           )}
@@ -57,7 +57,7 @@ const CartList = () => {
             ""
           ) : (
             <Link to="/checkOut">
-              <Button variant="contained">Finalizar Compra</Button>{" "}
+              <Button variant="contained" color="success">Finalizar Compra</Button>{" "}
             </Link>
           )}
         </div>

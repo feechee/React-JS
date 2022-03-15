@@ -75,7 +75,7 @@ const CheckOutForm = () => {
           value={values.telefono}
           onChange={onChange}
         />
-        <Button sx={{m:5}} variant="outlined" type="submit">
+        <Button sx={{m:5}} variant="outlined" type="submit" color="success">
           Comprar
         </Button>
       </Box>

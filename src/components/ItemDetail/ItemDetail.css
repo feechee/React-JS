@@ -2,7 +2,7 @@
     margin: 70px;
     display: flex;
     flex-direction: column;
-    border: 5px solid greenyellow;
+    
 }
 
 h1{
@@ -33,11 +33,8 @@ img{
 }
 
 .compra{
-    border: 2px solid rgb(80, 204, 80);
-    padding: 10px;
-    border-radius: 10px;
     text-decoration: none;
-    color:rgb(80, 204, 80);
+    color: green;
     
 
     

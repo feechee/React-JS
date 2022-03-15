@@ -1,5 +1,10 @@
 .cart{
-    color: rgb(26, 66, 66);
+    color: rgb(155, 224, 141);
     width: 50px;
     width: 50px;
+}
+
+.Linknav{
+    text-decoration: none;
+    color: white;
 }

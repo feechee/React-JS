@@ -10,6 +10,7 @@ import Cart from "../src/views/Cart/Cart";
 import {CartProvider} from "./context/CartContext"
 import Categorias from "../src/views/Categorias/Categorias";
 import CheckOut from "../src/views/CheckOut/CheckOut";
+import Footer from "../src/components/Footer/Footer"
 
 
 const App = () => {
@@ -29,6 +30,7 @@ const App = () => {
           </Routes>
         </div> 
     </Router>
+    <Footer />
     </CartProvider>
   );
 };

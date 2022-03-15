@@ -1,8 +1,16 @@
-.categoryContainer{
-    max-width: 70%;
-    display: flex;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content:center
+.carrousel{
+    margin-top: 70px;
+}
+
+.homeTextContainer{
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/trep-ar.appspot.com/o/Trepar-Logo.png?alt=media&token=e164636d-c114-4695-86e2-da356defe856");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+.homeText{
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.74);
 }
