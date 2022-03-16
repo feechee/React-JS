@@ -17,10 +17,10 @@ const Item = ({ data }) => {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" align="center">
-            {data.Nombre}
+          {data.Marca} {data.Nombre} 
           </Typography>
-          <Typography gutterBottom variant="h6" align="center">
-            {data.Marca}
+          <Typography gutterBottom variant="h6" align="center" color="green">
+            $ {data.Precio} 
           </Typography>
         </CardContent>
       </CardActionArea>

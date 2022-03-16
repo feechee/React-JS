@@ -21,7 +21,7 @@ const CheckOut = () => {
           {product.map((prod) => {
             subtotal = prod.Precio * prod.cantidad;
             total = total + subtotal;
-            return <CheckOutObject prod={prod} />;
+            return <CheckOutObject key={prod.id} prod={prod} />;
           })}
         </div>
       </div>
