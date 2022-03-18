@@ -4,6 +4,7 @@ import "../ItemDetail/ItemDetail.css";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 import Button from "@mui/material/Button";
+import Paper from "@mui/material/Paper";
 
 const ItemDetail = ({ data }) => {
   const [quantity, setQuantity] = useState([]);
@@ -12,9 +13,13 @@ const ItemDetail = ({ data }) => {
   };
   const { addProduct } = useContext(CartContext);
   return (
+    <Paper elevation={5}
+    sx={{
+      margin:15,
+    }}>
     <div className="containerDesc">
       <div className="containerDesc__item">
-        <h1>{data[0].Nombre}</h1>
+        <h2 className="h2Detail">{data[0].Nombre}</h2>
       </div>
       <div className="containerDesc__item">
         <img src={data[0].Img} alt="#"></img>
@@ -55,6 +60,7 @@ const ItemDetail = ({ data }) => {
         )}
       </div>
     </div>
+    </Paper>
   );
 };
 
