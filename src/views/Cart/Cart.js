@@ -7,9 +7,12 @@ const Cart = ()=>{
 
     return(
         <div className="cartContainer">
-            <h2>
+            <div>
+            <h2 className="h2Cart">
                 Carrito de Compra
             </h2>
+            </div>
+
             <div className="cartList">
                 <CartList />
             </div>

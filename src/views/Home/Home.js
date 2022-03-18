@@ -10,7 +10,7 @@ const Home = () => {
         <Carrousel />
       </div>
       <div className="homeTextContainer">
-        <h2 className="homeText">
+        <h2 className="homeH2">
          ENCONTRA EL MEJOR MATERIAL DE ESCALADA
         </h2>
       </div>

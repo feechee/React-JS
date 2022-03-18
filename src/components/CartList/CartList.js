@@ -16,6 +16,7 @@ const CartList = () => {
       <List
         sx={{
           width: "70%",
+          marginTop: 5,
         }}
         className="cards"
       >
@@ -33,21 +34,20 @@ const CartList = () => {
       {product.length === 0 ? (
         <p>
           {" "}
-          No ha agregado ningun producto. Ingrese a la sección{" "}
-          <Link to="/">Productos</Link> para realizar su compra.
+          No ha agregado ningun producto.
         </p>
       ) : (
         ""
       )}
-      <div className="total">
-        <p>Total: ${total}</p>
+      <div className="totalCart">
+        <h4>Total: ${total}</h4>
       </div>
       <div className="buttonContainer">
         <div className="vaciarButton">
           {product.length === 0 ? (
             ""
           ) : (
-            <Button onClick={deleteAll} variant="contained" color="secondary">
+            <Button onClick={deleteAll} variant="outlined" color="secondary">
               Vaciar
             </Button>
           )}
@@ -57,7 +57,7 @@ const CartList = () => {
             ""
           ) : (
             <Link to="/checkOut">
-              <Button variant="contained" color="success">Finalizar Compra</Button>{" "}
+              <Button variant="outlined" color="success">Finalizar Compra</Button>{" "}
             </Link>
           )}
         </div>

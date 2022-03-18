@@ -6,17 +6,25 @@ import Avatar from "@mui/material/Avatar";
 import ImageIcon from "@mui/icons-material/Image";
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
+import Paper from '@mui/material/Paper';
+import { flexbox } from "@mui/system";
 
 
 const CartObject = ({ prod, deleteProduct }) => {
   return (
     <div>
+      <Paper elevation={6}
+      sx={
+        {marginTop:1,
+          display: 'flex',
+          flexWrap:"wrap",
+          justifyContent:"space-evenly"
+        }
+      }
+      >
       <ListItem
         sx={{
-          height: 100,
-          backgroundColor:"#0000002a",
-          margin:0.5,
-          borderRadius:25,
+          flexWrap:"wrap"
         }}>
         <ListItemAvatar>
           <Avatar
@@ -32,7 +40,7 @@ const CartObject = ({ prod, deleteProduct }) => {
         </ListItemAvatar>
         <ListItemText primary={prod.Nombre} />
         <ListItemText primary={`Cantidad: ${prod.cantidad}`} />
-        <ListItemText primary={`Precio: $${prod.Precio*prod.cantidad}`} />
+        <ListItemText primary={` $${prod.Precio*prod.cantidad}`} />
         <IconButton
               aria-label="close"
               color="inherit"
@@ -42,6 +50,7 @@ const CartObject = ({ prod, deleteProduct }) => {
               <CloseIcon fontSize="inherit" />
             </IconButton>
       </ListItem>
+      </Paper >
     </div>
   );
 };

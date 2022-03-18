@@ -10,7 +10,19 @@
     
 }
 
-.homeText{
+.homeH2{
     margin-top: 20px;
     background-color: rgba(255, 255, 255, 0.74);
+    margin-top: 100px;
+    padding: 50px;
+    text-transform: uppercase;
+    color: gray;
+    text-align: center;
+}
+
+.homeText{
+    margin: 50px;
+    background-color: rgba(255, 255, 255, 0.74);
+    color: gray;
+    text-align:justify
 }

@@ -1,20 +1,16 @@
-.cartContainer{
-    height: 976px;
-    background-image: url("https://firebasestorage.googleapis.com/v0/b/trep-ar.appspot.com/o/Imagenes%2Fwallpapertip_rock-climbing-wallpaper_426866.jpg?alt=media&token=caf7aef0-23d1-4404-976f-bcee8816aaa9");
-}
 
-h2{
+
+.h2Cart{
+    margin-top: 100px;
     padding: 50px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: gray;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color: rgba(201, 240, 179, 0.452);
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .cartList{
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }

@@ -6,12 +6,16 @@ import Avatar from "@mui/material/Avatar";
 import ImageIcon from "@mui/icons-material/Image";
 import IconButton from '@mui/material/IconButton';
 import "../CheckOutObject/CheckOutObject.css"
+import Paper from "@mui/material/Paper";
 
 
 
 const CheckOutObject = ({ prod }) => {
   return (
-    <div className="checkObject">
+    <Paper elevation={3}
+    sx={{
+      margin:1,
+    }}>
       <ListItem sx={
         {
           flexDirection:"column",
@@ -39,7 +43,7 @@ const CheckOutObject = ({ prod }) => {
             >
             </IconButton>
       </ListItem>
-    </div>
+      </Paper>
   );
 };
 

@@ -1,10 +1,10 @@
 
 .checkH2{
+    text-align: center;
     margin-top: 100px;
-    margin-left: 20px;
-    margin-right: 20px;
-    border: 2px grey solid;
-    border-radius: 25px;
+    padding: 50px;
+    background-color: rgba(201, 240, 179, 0.452);
+    text-transform: uppercase;
 }
 
 .checkH3{
@@ -19,14 +19,17 @@
     flex-wrap: wrap-reverse;
     justify-content: space-evenly;
     margin: 20px;
-    border: 2px grey solid;
-    border-radius: 25px;
     
 }
 
-.total{
-    border-top: 2px grey solid;
-    border-bottom: 2px grey solid;
+.totalCheckOut{
+    margin-right: 20px;
+}
+
+.checkItems{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 
