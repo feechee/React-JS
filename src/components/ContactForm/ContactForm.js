@@ -1,21 +1,17 @@
 import React, { useState, useContext } from "react";
-import "../CheckOutForm/CheckOutForm.css";
+import "../ContactForm/ContactForm.css";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { Button } from "@mui/material";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../FireBase/FireBase";
-import PurchaseMessage from "../PurchaseMessage/PurchaseMessage";
+import ContactMessage from "../ContactMessage/ContactMessage";
 import { Formik } from "formik";
 
 
-const formFormat = ["Nombre", "Apellido", "E-mail", "Teléfono"];
-
-const CheckOutForm = () => {
+const ContactForm = () => {
 
   const [submitForm, setSubmitForm] = useState(false);
-  const [compraID, setCompraID] = useState("");
-
 
   return (
     <div className="checkOutForm">
@@ -25,6 +21,7 @@ const CheckOutForm = () => {
           apellido: "",
           email: "",
           telefono: "",
+          mensaje:"",
         }}
         validate={(valores) => {
           let errores = {};
@@ -60,15 +57,18 @@ const CheckOutForm = () => {
             errores.telefono = "Formato inválido ej: 1154544545";
           }
 
+          if (!valores.mensaje) {
+            errores.mensaje = "Por favor ingresa un Mensaje";
+          }
+
           return errores;
         }}
         onSubmit={async (valores, { resetForm }) => {
-          const docRef = await addDoc(collection(db, "Compras"), {
+          const docRef = await addDoc(collection(db, "Mensajes"), {
             valores,
           });
           setSubmitForm(true);
           resetForm();
-          setCompraID(docRef.id);
         }}
       >
         {({
@@ -182,20 +182,49 @@ const CheckOutForm = () => {
                 onBlur={handleBlur}
               />
             )}
+
+{touched.mensaje && errors.mensaje ? (
+              <TextField
+                multiline
+                rows={4}
+                id="outlined-error-helper-text"
+                error
+                label="Mensaje"
+                variant="outlined"
+                name="mensaje"
+                value={values.mensaje}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                helperText={errors.mensaje}
+              />
+            ) : (
+              <TextField
+                multiline
+                id="outlined-basic"
+                label="Mensaje"
+                variant="outlined"
+                name="mensaje"
+                value={values.mensaje}
+                onChange={handleChange}
+                onBlur={handleBlur}
+              />
+            )}
+
+
             <Button
               sx={{ m: 5 }}
               variant="outlined"
               type="submit"
               color="success"
             >
-              Comprar
+              Enviar Mensaje
             </Button>
           </Box>
         )}
       </Formik>
-      {submitForm && <PurchaseMessage orden={compraID} />}
+      {submitForm && <ContactMessage />}
     </div>
   );
 };
 
-export default CheckOutForm;
+export default ContactForm;
