@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import "../ContactForm/ContactForm.css";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
@@ -8,9 +8,8 @@ import { db } from "../../FireBase/FireBase";
 import ContactMessage from "../ContactMessage/ContactMessage";
 import { Formik } from "formik";
 
-
+//Formulario de contacto, los mensajes son guardados en firebase
 const ContactForm = () => {
-
   const [submitForm, setSubmitForm] = useState(false);
 
   return (
@@ -21,7 +20,7 @@ const ContactForm = () => {
           apellido: "",
           email: "",
           telefono: "",
-          mensaje:"",
+          mensaje: "",
         }}
         validate={(valores) => {
           let errores = {};
@@ -52,7 +51,7 @@ const ContactForm = () => {
           if (!valores.telefono) {
             errores.telefono = "Por favor ingresa un Teléfono";
           } else if (
-            !/^\(?\d{2}\)?[\s\.-]?\d{4}[\s\.-]?\d{4}$/.test(valores.telefono)
+            !/^\(?\d{2}\)?[\s-]?\d{4}[\s-]?\d{4}$/.test(valores.telefono)
           ) {
             errores.telefono = "Formato inválido ej: 1154544545";
           }
@@ -64,7 +63,7 @@ const ContactForm = () => {
           return errores;
         }}
         onSubmit={async (valores, { resetForm }) => {
-          const docRef = await addDoc(collection(db, "Mensajes"), {
+          await addDoc(collection(db, "Mensajes"), {
             valores,
           });
           setSubmitForm(true);
@@ -89,7 +88,6 @@ const ContactForm = () => {
             noValidate
             autoComplete="on"
           >
-            
             {touched.nombre && errors.nombre ? (
               <TextField
                 id="outlined-error-helper-text"
@@ -183,7 +181,7 @@ const ContactForm = () => {
               />
             )}
 
-{touched.mensaje && errors.mensaje ? (
+            {touched.mensaje && errors.mensaje ? (
               <TextField
                 multiline
                 rows={4}
@@ -209,7 +207,6 @@ const ContactForm = () => {
                 onBlur={handleBlur}
               />
             )}
-
 
             <Button
               sx={{ m: 5 }}

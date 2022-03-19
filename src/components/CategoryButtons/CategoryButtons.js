@@ -1,7 +1,6 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
-import Button from "@mui/material/Button";
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
@@ -12,6 +11,7 @@ import "../CategoryButtons/CategoryButtons.css";
 import LabelImportantIcon from "@mui/icons-material/LabelImportant";
 import MenuIcon from "@mui/icons-material/Menu";
 
+//Boton ubicado en el NavBar, despliega un Sidebar con categorias
 const CategoryButtons = () => {
   const [state, setState] = React.useState({
     top: false,

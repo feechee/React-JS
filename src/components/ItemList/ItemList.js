@@ -3,7 +3,7 @@ import Item from "../Item/Item";
 import "./ItemList.css";
 import { Link } from "react-router-dom";
 
-
+//Listado de productos
 const ItemList = (productos) => {
   const prod = productos.productos;
   return (

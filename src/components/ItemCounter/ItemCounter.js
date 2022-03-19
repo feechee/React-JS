@@ -4,6 +4,7 @@ import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import Button from "@mui/material/Button";
 
+//Calcula la cantidad de productos que se agregaran al carrito
 const ItemCounter = ({ cant, change }) => {
   const [counter, setCounter] = React.useState(1);
   const handlerCounterUp = () => {

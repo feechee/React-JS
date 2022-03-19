@@ -1,7 +1,31 @@
+@media(min-width: 577px){
+
 .carrouselImg{
     width: 100%;
+    height:auto;
+    
 }
 
 .carrousel{
     height: 555px;
 }
+
+
+
+}
+
+@media(max-width: 576px){
+    .carrousel{
+        height: 150px;
+    }
+
+    .carrouselImg{
+        width: 100%;
+        height:auto;
+        
+    }
+
+}
+
+
+

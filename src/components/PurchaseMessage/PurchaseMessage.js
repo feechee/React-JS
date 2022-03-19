@@ -8,6 +8,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 
+//Mensaje submit de compra
 const PurchaseMessage = ({orden})=> {
   const [open, setOpen] = useState(true);
   const {deleteAll}  = useContext(CartContext);

@@ -3,7 +3,9 @@ import Carousel from 'react-material-ui-carousel'
 import { Paper } from '@mui/material'
 import "../Carrousel/Carrousel.css"
 
+//Carrousel de fotos del Home
 const Carrousel = ()=>{
+    //Array con el listado de fotos
     let items = [
         {
             name: "Trep.ar",
@@ -33,8 +35,6 @@ function Item(props)
     return (
         <Paper className="carrouselPaper">
             <img className="carrouselImg" src={props.item.img} alt={props.item.name}></img>
-            <h2>{props.item.name}</h2>
-            
         </Paper>
     )
 }

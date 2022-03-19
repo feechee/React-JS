@@ -6,8 +6,7 @@ import { Link } from "react-router-dom";
 import "../Cartwidget/Cartwidget.css"
 import { CartContext } from "../../context/CartContext";
 
-
-
+//Icono del carrito ubicado en el NavBar
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
     right: -3,

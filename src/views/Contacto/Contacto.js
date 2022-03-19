@@ -1,6 +1,7 @@
 import React from "react";
 import ContactForm from "../../components/ContactForm/ContactForm";
 import "../Contacto/Contacto.css"
+
 const Contacto = () => {
   return (
     <div className="contactContainer">

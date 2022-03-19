@@ -7,9 +7,8 @@ import ImageIcon from "@mui/icons-material/Image";
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import Paper from '@mui/material/Paper';
-import { flexbox } from "@mui/system";
 
-
+//Productos agregados al carrito
 const CartObject = ({ prod, deleteProduct }) => {
   return (
     <div>

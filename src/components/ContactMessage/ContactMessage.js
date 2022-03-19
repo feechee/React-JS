@@ -1,29 +1,26 @@
-import React, {useContext, useState} from 'react';
-import Button from '@mui/material/Button';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
+import React, { useContext, useState } from "react";
+import Button from "@mui/material/Button";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
 import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 
-const ContactMessage = ()=> {
+//Mensaje de submit del formulario de contacto
+const ContactMessage = () => {
   const [open, setOpen] = useState(true);
-  const {deleteAll}  = useContext(CartContext);
-
+  const { deleteAll } = useContext(CartContext);
 
   const handleClose = () => {
     setOpen(false);
   };
 
-  const finalziarCompra = () =>{
-    return(
-      handleClose(),
-      deleteAll()
-    )
+  const finalziarCompra = () => {
+    return (handleClose(), deleteAll())
   };
- 
+
   return (
     <div>
       <Dialog
@@ -41,13 +38,12 @@ const ContactMessage = ()=> {
         </DialogContent>
         <DialogActions>
           <Link to="/" className="link">
-          <Button onClick={finalziarCompra}>OK</Button>
+            <Button onClick={finalziarCompra}>OK</Button>
           </Link>
-          
         </DialogActions>
       </Dialog>
     </div>
   );
-}
+};
 
 export default ContactMessage;

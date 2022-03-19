@@ -6,6 +6,7 @@ import { CartContext } from "../../context/CartContext";
 import Button from "@mui/material/Button";
 import Paper from "@mui/material/Paper";
 
+//Detalle de los productos
 const ItemDetail = ({ data }) => {
   const [quantity, setQuantity] = useState([]);
   const onChangeValue = (e) => {
@@ -13,10 +14,8 @@ const ItemDetail = ({ data }) => {
   };
   const { addProduct } = useContext(CartContext);
   return (
-    <Paper elevation={5}
-    sx={{
-      margin:15,
-    }}>
+    <Paper className="detailContainer" elevation={5}
+    >
     <div className="containerDesc">
       <div className="containerDesc__item">
         <h2 className="h2Detail">{data[0].Nombre}</h2>

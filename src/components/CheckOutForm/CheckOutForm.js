@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import "../CheckOutForm/CheckOutForm.css";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
@@ -8,14 +8,11 @@ import { db } from "../../FireBase/FireBase";
 import PurchaseMessage from "../PurchaseMessage/PurchaseMessage";
 import { Formik } from "formik";
 
-
-const formFormat = ["Nombre", "Apellido", "E-mail", "Teléfono"];
+//Formulario de la seccion CheckOut desarrollado con Formik
 
 const CheckOutForm = () => {
-
   const [submitForm, setSubmitForm] = useState(false);
   const [compraID, setCompraID] = useState("");
-
 
   return (
     <div className="checkOutForm">
@@ -28,7 +25,7 @@ const CheckOutForm = () => {
         }}
         validate={(valores) => {
           let errores = {};
-
+          //errores
           if (!valores.nombre) {
             errores.nombre = "Por favor ingresa un Nombre";
           } else if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(valores.nombre)) {
@@ -55,7 +52,7 @@ const CheckOutForm = () => {
           if (!valores.telefono) {
             errores.telefono = "Por favor ingresa un Teléfono";
           } else if (
-            !/^\(?\d{2}\)?[\s\.-]?\d{4}[\s\.-]?\d{4}$/.test(valores.telefono)
+            !/^\(?\d{2}\)?[\s-]?\d{4}[\s-]?\d{4}$/.test(valores.telefono)
           ) {
             errores.telefono = "Formato inválido ej: 1154544545";
           }
@@ -89,7 +86,6 @@ const CheckOutForm = () => {
             noValidate
             autoComplete="on"
           >
-            
             {touched.nombre && errors.nombre ? (
               <TextField
                 id="outlined-error-helper-text"

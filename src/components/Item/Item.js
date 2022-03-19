@@ -5,6 +5,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea, CardActions } from "@mui/material";
 
+//Card de producto
 const Item = ({ data }) => {
   return (
     <Card sx={{ maxWidth: 300 }}>
@@ -17,10 +18,10 @@ const Item = ({ data }) => {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" align="center">
-          {data.Marca} {data.Nombre} 
+            {data.Marca} {data.Nombre}
           </Typography>
           <Typography gutterBottom variant="h6" align="center" color="green">
-            $ {data.Precio} 
+            $ {data.Precio}
           </Typography>
         </CardContent>
       </CardActionArea>

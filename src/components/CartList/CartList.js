@@ -6,6 +6,7 @@ import Button from "@mui/material/Button";
 import "../CartList/CartList.css";
 import { Link } from "react-router-dom";
 
+//Listado de productos agregados al carrito, la data proviene de CartContext
 const CartList = () => {
   const { product, deleteProduct, deleteAll } = useContext(CartContext);
   let subtotal = 0;

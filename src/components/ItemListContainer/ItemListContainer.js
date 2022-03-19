@@ -4,6 +4,7 @@ import {db} from "../../FireBase/FireBase"
 import { collection, query, getDocs } from "firebase/firestore";
 import Spinner from "../Spinner/Spinner";
 
+//Trae la informacion de los productos desde firebase
 const ItemListContainer = () => {
   const [datos, setDatos] = useState([]);
   const [isLoading, setIsloading] = useState(true);
